@@ -7,9 +7,23 @@
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  height: 100%;
+  @apply bg-white
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+
+.background {
+  background-image: url("/app/assets/logo-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-size: 90% auto; /* Shrink horizontally */
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85); /* dark overlay */
+  z-index: 0;
 }
