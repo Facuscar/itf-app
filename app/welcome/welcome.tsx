@@ -29,13 +29,15 @@ export function Welcome() {
   }
 
   const onClickRestart = () => {
+    console.log("AA");
+    
     setPatternPoints(initialPatternPoints)
   }
   
   return (
     <main className="h-full background">
         <div className="relative">
-          <div className="absolute right-8 top-8 bg-gray-950 p-4 rounded-[50%]" onClick={onClickRestart}>
+          <div className="absolute right-8 top-8 bg-gray-950 p-4 rounded-[50%] z-11" onClick={onClickRestart}>
             <RotateCcw size={20} color="white" />
           </div>
         </div>
